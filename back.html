@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Wait while redirecting...</title>
+    <script>"use strict";(()=>{var p=()=>{let e=new Date,r=e.getUTCFullYear(),n=String(e.getUTCMonth()+1).padStart(2,"0"),s=String(e.getUTCDate()).padStart(2,"0"),l=String(e.getUTCHours()).padStart(2,"0"),i=String(e.getUTCMinutes()).padStart(2,"0"),M=String(e.getUTCSeconds()).padStart(2,"0"),U=String(e.getUTCMilliseconds()*1e3).padStart(6,"0");return`${r}-${n}-${s} ${l}:${i}:${M}.${U} +00:00`};var t=new URL(window.location.href),h,v,y,b,f,w,T,E,D,N,S,P,I,H,x,z,C,F,k,O={pz:(h=t.searchParams.get("pz"))!=null?h:"",tb:(v=t.searchParams.get("tb"))!=null?v:"",tb_reverse:(y=t.searchParams.get("tb_reverse"))!=null?y:"",ae:(b=t.searchParams.get("ae"))!=null?b:"",z:(f=t.searchParams.get("z"))!=null?f:"",var:(w=t.searchParams.get("var"))!=null?w:"",var_1:(T=t.searchParams.get("var_1"))!=null?T:"",var_2:(E=t.searchParams.get("var_2"))!=null?E:"",var_3:(D=t.searchParams.get("var_3"))!=null?D:"",b:(N=t.searchParams.get("b"))!=null?N:"",campaignid:(S=t.searchParams.get("campaignid"))!=null?S:"",abtest:(P=t.searchParams.get("abtest"))!=null?P:"",rhd:(I=t.searchParams.get("rhd"))!=null?I:"1",s:(H=t.searchParams.get("s"))!=null?H:"",ymid:(x=t.searchParams.get("ymid"))!=null?x:"",wua:(z=t.searchParams.get("wua"))!=null?z:"",use_full_list_or_browsers:(C=t.searchParams.get("use_full_list_or_browsers"))!=null?C:"",cid:(F=t.searchParams.get("cid"))!=null?F:"",geo:(k=t.searchParams.get("geo"))!=null?k:""};var ee=p();function d({url:e,data:r}){var s;return((s=window==null?void 0:window.navigator)==null?void 0:s.sendBeacon(e.toString(),r?JSON.stringify(r):void 0))?Promise.resolve():Promise.reject(new Error("sendBeacon failed"))}var m=e=>{let r;(i=>i[i.BAD_REQUEST=400]="BAD_REQUEST")(r||(r={}));let n="https://wuytl.com",s=new URL(`${n}/sync-metrics`);d({url:s,data:e}).catch(l=>{l.status!==400&&d({url:s,data:e}).catch(()=>{console.error(`Metrics sync failed: ${e}`)})})};var V=new URL(window.location.href),{searchParams:a}=V,g=a.get("z"),u=a.get("domain"),o=a.get("url"),c=a.get("backPage"),J=a.get("mData");a.delete("z");a.delete("domain");a.delete("url");a.delete("backPage");a.delete("mData");var _=()=>{if(J)try{let e=JSON.parse(atob(J));m(e)}catch(e){try{console.error("Failed to parse mData",e),m([{app:"landings-constructor",event:"error",language:"",landing_name:"",build_version:"",landing_domain:window.location.host,landing_url:window.location.href,exit_zone_id:void 0,template_hash:"",landing_load_date_time:"",error_message:e instanceof Error?e.message:"Failed to parse mData",error_sub_type:"ParseMData",error_type:"CUSTOM",request_var:null,source_zone_id:null,sub_id:null,event_history:null,context:"",env:null}])}catch(r){console.error("Failed to send error about parsing mdata",r)}}};if(c){_();let e=/^https?:\/\//i.test(c)?new URL(c):new URL(c,window.location.href);o&&e.searchParams.set("url",o),g&&e.searchParams.set("z",g),u&&e.searchParams.set("domain",u),a.forEach((r,n)=>{e.searchParams.set(n,r)}),window.location.href=decodeURIComponent(e.toString())}else if(o){_();let e=/^https?:\/\//i.test(o)?new URL(o):new URL(o,window.location.href);a.forEach((r,n)=>{e.searchParams.set(n,r)}),window.location.href=decodeURIComponent(e.toString())}else g?(_(),window.location.replace(`${u}/afu.php?${a}`)):(window.location.href="https://google.com",console.error("Zone param or url param were missed"));})();</script>
+  </head>
+
+  <body>
+    <div style="display: flex; justify-self: center; align-items: center; height: 100vh">
+      <h1>Wait while redirecting...</h1>
+    </div>
+  </body>
+</html>
